@@ -17,8 +17,8 @@ class PigLatinizer
     !char.match(/[aAeEiIoOuU]/)
   end
 
-  def to_pig_latin(sentence)
-    sentence.split.collect {|word| piglatinize(word)}.join(" ")
+  def piglatinize_sentence(sentence)
+    sentence.split.collect { |word| piglatinize_word(word) }.join(" ")
   end
 
 end
