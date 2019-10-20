@@ -12,13 +12,13 @@ class PigLatinizer
     end
     word << "ay"
   end
-
+def piglatinize_sentence(sentence)
+    sentence.split.collect { |word| piglatinize_word(word) }.join(" ")
+  end
   def consonant?(char)
     !char.match(/[aAeEiIoOuU]/)
   end
 
-  def piglatinize_sentence(sentence)
-    sentence.split.collect { |word| piglatinize_word(word) }.join(" ")
-  end
+  
 
 end
